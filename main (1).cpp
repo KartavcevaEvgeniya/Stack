@@ -39,12 +39,6 @@ public:
 
     void Del()
     {
-        if (Top == nullptr)
-        {
-            cout << "Stack is empty!" << endl;
-            return;
-        }
-
         Element<T>* temp = Top;
 
         Top = Top->Next;
@@ -64,6 +58,13 @@ public:
     void Print()
     {
         Element<T>* temp = Top;
+
+        while (temp != nullptr)
+        {
+            cout << temp->data << " ";
+            temp = temp->Next;
+        }
+
         cout << endl;
     }
 };
