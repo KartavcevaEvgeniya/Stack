@@ -64,13 +64,6 @@ public:
     void Print()
     {
         Element<T>* temp = Top;
-
-        while (temp != nullptr)
-        {
-            cout << temp->data << " ";
-            temp = temp->Next;
-        }
-
         cout << endl;
     }
 };
